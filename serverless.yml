@@ -1,0 +1,26 @@
+org: stellarmenus
+app: testing
+service: newrelic-test
+
+frameworkVersion: "3"
+
+useDotenv: true
+
+plugins:
+  - serverless-newrelic-lambda-layers
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+functions:
+  hello:
+    handler: handler.hello
+
+custom:
+  newRelic:
+    accountId: ${env:ACCOUNT_ID}
+    apiKey: ${env:API_KEY}
+    enableFunctionLogs: true
+    enableIntegration: true

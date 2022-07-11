@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "serverless-newrelic-lambda-layers": "^3.3.3",
+    "serverless-plugin-typescript": "^2.1.2"
+  }
+}
